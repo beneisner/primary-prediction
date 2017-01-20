@@ -89,3 +89,6 @@ ENV/
 .ropeproject
 
 secret.txt
+
+.Rproj.user
+
