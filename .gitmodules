@@ -1,0 +1,3 @@
+[submodule "thirdparty/stance-conditional"]
+	path = thirdparty/stance-conditional
+	url = https://github.com/beneisner/stance-conditional.git
