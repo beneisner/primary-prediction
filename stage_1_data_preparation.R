@@ -1,7 +1,127 @@
 library(data.table)
+library(bit64)
+library(DMwR)
+library(mice)
+library(parallel)
+library(doMC)
 setwd("/Users/Joshi/Dev/primary-prediction/")
 primary_results <- fread("data/election_results/primary_results.csv")
 primary_dates <- fread("data/other/state_date_primary.csv")
-
 colnames(primary_dates) <- c("state", "republican_primary_date", "democrat_primary_date")
+additional_kaggle_features <- fread("data/election_results/county_facts.csv")
+
+# Merge results and dates
+primary_results <- merge(primary_results, primary_dates, by = "state")
+
+# Merge results and additional kaggle features
+primary_results <- merge(additional_kaggle_features, primary_results, by = "fips", all.y = TRUE)
+primary_results_df <- data.frame(primary_results)
+
+big10 <- 2000000000000000000
+primary_results_df$MAN450207[which(primary_results_df$MAN450207 > 2000000000000000000)] = NA
+primary_results_df$WTN220207[which(primary_results_df$WTN220207 > 2000000000000000000)] = NA
+primary_results_df$RTN130207[which(primary_results_df$RTN130207 > 2000000000000000000)] = NA
+primary_results_df$fips[which(is.na(primary_results_df$fips))] <- -1
+
+primary_results_df$MAN450207 <- as.numeric(primary_results_df$MAN450207)
+primary_results_df$WTN220207 <- as.numeric(primary_results_df$WTN220207)
+primary_results_df$RTN130207 <- as.numeric(primary_results_df$RTN130207)
+
+primary_date <- sapply(c(1:length(primary_results_df$party)), function(x) {
+  party_name <- primary_results_df$party[x]
+  if(x == "Democrat") {
+    return(primary_results_df$democrat_primary_date[x])
+  } else {
+    return(primary_results_df$republican_primary_date[x])
+  }
+})
+
+primary_results_df$democrat_primary_date <- NULL
+primary_results_df$republican_primary_date <- NULL
+
+primary_results_df$primary_date <- primary_date
+
+# Remove Uncommitted, No Preference
+primary_results_df <- primary_results_df[which(!(primary_results_df$candidate %in% c("Uncommitted", "No Preference"))),]
+primary_results <- data.table(primary_results_df)
+
+all_candidates <- unique(primary_results_df$candidate)
+all_candidates_mod <- gsub('([[:punct:]])|\\s+','_',all_candidates)
+all_candidates_mod <- paste0("is_running_", all_candidates_mod)
+
+primary_candidate_to_date <- primary_results[,.(list(unique(primary_date))), by = candidate]
+
+primary_date <- primary_results_df$primary_date
+mini_df <- data.frame(primary_date)
+
+registerDoMC(8)
+for(i in all_candidates) {
+  a <- unlist(primary_candidate_to_date$V1[which(primary_candidate_to_date$candidate == i)])
+  mini_df[i] <- ifelse(mini_df$primary_date %in% a,1,0)
+}
+
+mini_df$primary_date <- NULL
+colnames(mini_df) <- all_candidates_mod
+primary_results_df <- cbind(primary_results_df, mini_df)
+
+# Preparing the dataset for NA removal
+
+# 0 represents democrat, 1 republican
+primary_results_df$party <- as.numeric(as.factor(primary_results_df$party)) - 1
+
+primary_results_df$area_name <- NULL
+primary_results_df$state_abbreviation.x <- NULL
+state <- primary_results_df$state
+primary_results_df$state <- NULL
+primary_results_df$state_abbreviation.y <- NULL
+primary_results_df$county <- NULL
+
+candidate <- primary_results_df$candidate
+candidate_df <- data.frame(cbind(model.matrix(~. + 0, data = data.frame(candidate))))
+
+colnames(candidate_df) <- c("Ben_Carson", "Bernie_Sanders", "Carly_Fiorina", 
+                            "Chris_Christie", "Donald_Trump", "Hillary_Clinton",
+                            "Jeb_Bush", "John_Kasich", "Marco_Rubio", 
+                            "Martin_OMalley", "Mike_Huckabee", "Rand_Paul",
+                            "Rick_Santorum", "Ted_Cruz"
+                            )
+
+primary_results_df <- cbind(primary_results_df, candidate_df)
+primary_results_df$candidate <- NULL
+
+fraction_votes <- primary_results_df$fraction_votes
+primary_results_df$fraction_votes <- NULL
+
+# Replace NAs
+a <- mice(primary_results_df,m=1,maxit=2,meth='cart',seed=500)
+primary_results_df <- complete(a,1)
+primary_results_df$PST040210[which(is.na(primary_results_df$PST040210))] <- median(primary_results_df$PST040210[which(!is.na(primary_results_df$PST040210))])
+primary_results_df$POP010210[which(is.na(primary_results_df$POP010210))] <- median(primary_results_df$POP010210[which(!is.na(primary_results_df$POP010210))])
+
+primary_results_df$fraction_votes <- fraction_votes
+primary_results_df$primary_date <-  as.Date(primary_date, "%m/%d/%y")
+primary_results_df$fips <- NULL
+
+primary_results <- data.table(primary_results_df)
+
+
+
+
+
+
+# a <- table(primary_results_df$primary_date)
+# cumsum(a[order(names(a))])
+
+# Training: 2016-02-01 through 2016-03-05
+# Validation: 2016-03-08 through 2016-04-19
+# Testing: 2016-04-26 through 2016-06-07
+
+train_df <- primary_results_df[which(primary_results_df$primary_date <= "2016-03-05"),]
+val_df <- primary_results_df[which(primary_results_df$primary_date >= "2016-03-08" & 
+                                       primary_results_df$primary_date <= "2016-04-19"),]
+test_df <- primary_results_df[which(primary_results_df$primary_date >= "2016-04-26"),]
+
+saveRDS(train_df, file = "RDS/train_df")
+saveRDS(val_df, file = "RDS/val_df")
+saveRDS(test_df, file = "RDS/test_df")
 
