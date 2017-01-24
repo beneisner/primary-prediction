@@ -1,0 +1,256 @@
+State,Party,Candidate,min,25th,median,75th,max,mean,avg_size
+Alabama,Democrat,Clinton,59,62,65,68,71,65,400
+Alabama,Democrat,Sanders,23,25,27,29,31,27,400
+Alabama,Republican,Rubio,0,0,0,0,0,0,0
+Alabama,Republican,Cruz,12,13,16,16.2,18,15.04,1009.4
+Alabama,Republican,Trump,35.8,36,36,42,47,39.36,1009.4
+Alaska,Democrat,Clinton,0,0,0,0,0,0,0
+Alaska,Democrat,Sanders,0,0,0,0,0,0,0
+Alaska,Republican,Rubio,0,0,0,0,0,0,0
+Alaska,Republican,Cruz,27,27,27,27,27,27,318
+Alaska,Republican,Trump,41,41,41,41,41,41,318
+Arizona,Republican,Cruz,19,21.15,23.3,28.3,33.3,25.2,552.6666667
+Arizona,Republican,Rubio,0,0,0,0,0,0,0
+Arizona,Democrat,Sanders,24,24,24,24,24,24,300
+Arizona,Democrat,Clinton,50,50,50,50,50,50,300
+Arizona,Republican,Trump,31,34.15,37.3,41.55,45.8,38.03333333,552.6666667
+Arkansas,Republican,Cruz,27,27,27,27,27,27,542
+Arkansas,Republican,Rubio,0,0,0,0,0,0,0
+Arkansas,Democrat,Sanders,32,32,32,32,32,32,525
+Arkansas,Democrat,Clinton,57,57,57,57,57,57,525
+Arkansas,Republican,Trump,34,34,34,34,34,34,542
+California,Democrat,Clinton,45,47,49,49,57,49,567
+California,Democrat,Sanders,39,41,44,47,47,43.71428571,567
+California,Republican,Rubio,0,0,0,0,0,0,0
+California,Republican,Cruz,0,0,0,0,0,0,0
+California,Republican,Trump,0,0,0,0,0,0,0
+Colorado,Republican,Trump,0,0,0,0,0,0,0
+Colorado,Republican,Cruz,0,0,0,0,0,0,0
+Colorado,Republican,Rubio,0,0,0,0,0,0,0
+Colorado,Democrat,Clinton,44,44,44,44,44,44,1144
+Colorado,Democrat,Sanders,49,49,49,49,49,49,1144
+Connecticut,Democrat,Clinton,48,48.5,49,50,51,49.33333333,700.6666667
+Connecticut,Democrat,Sanders,42,42.5,43,44.5,46,43.66666667,700.6666667
+Connecticut,Republican,Rubio,0,0,0,0,0,0,0
+Connecticut,Republican,Cruz,0,0,0,0,0,0,0
+Connecticut,Republican,Trump,48,49.5,52,55.25,59,52.75,663.25
+Delaware,Democrat,Sanders,38,38,38,38,38,38,1026
+Delaware,Republican,Trump,55,55,55,55,55,55,1038
+Delaware,Republican,Cruz,0,0,0,0,0,0,0
+Delaware,Republican,Rubio,0,0,0,0,0,0,0
+Delaware,Democrat,Clinton,45,45,45,45,45,45,1026
+District of Columbia,Republican,Rubio,0,0,0,0,0,0,0
+District of Columbia,Republican,Cruz,0,0,0,0,0,0,0
+District of Columbia,Democrat,Sanders,0,0,0,0,0,0,0
+District of Columbia,Democrat,Clinton,0,0,0,0,0,0,0
+District of Columbia,Republican,Trump,0,0,0,0,0,0,0
+Florida,Democrat,Clinton,54,58,60,61.5,68,60.06666667,524.4
+Florida,Democrat,Sanders,23,30.5,32,34,42,31.86666667,524.4
+Florida,Republican,Rubio,20,22.25,24.5,27,32,25.31538462,699.7307692
+Florida,Republican,Cruz,0,0,0,0,0,0,0
+Florida,Republican,Trump,33,38,43,44,49,41.35769231,699.7307692
+Georgia,Democrat,Clinton,57,60,63,66,72,63.67777778,589.5555556
+Georgia,Democrat,Sanders,19.8,26,29,30,36,28.31111111,589.5555556
+Georgia,Republican,Rubio,18.25,20,22,22.925,23.54,21.349,799.6
+Georgia,Republican,Cruz,0,0,0,0,0,0,0
+Georgia,Republican,Trump,30,33.25,38.75,39.75,45,37.145,799.6
+Hawaii,Republican,Trump,0,0,0,0,0,0,0
+Hawaii,Republican,Cruz,0,0,0,0,0,0,0
+Hawaii,Republican,Rubio,0,0,0,0,0,0,0
+Hawaii,Democrat,Clinton,0,0,0,0,0,0,0
+Hawaii,Democrat,Sanders,0,0,0,0,0,0,0
+Idaho,Republican,Trump,0,0,0,0,0,0,0
+Idaho,Republican,Cruz,0,0,0,0,0,0,0
+Idaho,Republican,Rubio,0,0,0,0,0,0,0
+Idaho,Democrat,Clinton,0,0,0,0,0,0,0
+Idaho,Democrat,Sanders,0,0,0,0,0,0,0
+Illinois,Republican,Cruz,15.87,19.9,22,25,34,23.354,822.2
+Illinois,Democrat,Clinton,31,47,51,59.765,67,51.79,712.2857143
+Illinois,Democrat,Sanders,25,26.425,30,45,48,35.12142857,712.2857143
+Illinois,Republican,Rubio,0,0,0,0,0,0,0
+Illinois,Republican,Trump,32,32.64,34,38,38.44,35.016,822.2
+Indiana,Democrat,Sanders,40,41.5,43,44.5,46,43,509
+Indiana,Republican,Rubio,0,0,0,0,0,0,0
+Indiana,Republican,Cruz,27,31.75,33.5,35.05,44.8,34,474.375
+Indiana,Republican,Trump,29,37.075,40.5,41.75,49,39.7625,474.375
+Indiana,Democrat,Clinton,46,48.5,50,52.5,55,50.42857143,509
+Iowa,Democrat,Sanders,30,42,43,47.75,51,43.38888889,509.0555556
+Iowa,Republican,Cruz,19.4,23,25,26.5,34,25.37894737,520.8947368
+Iowa,Republican,Rubio,0,0,0,0,0,0,0
+Iowa,Republican,Trump,18.9,27.5,31,33.5,39,30.26315789,520.8947368
+Iowa,Democrat,Clinton,43,46,47.7,50.25,59,48.63333333,509.0555556
+Kansas,Democrat,Clinton,33,33,33,33,33,33,123
+Kansas,Democrat,Sanders,23,23,23,23,23,23,123
+Kansas,Republican,Rubio,0,0,0,0,0,0,0
+Kansas,Republican,Cruz,14,17.8275,21.655,25.4825,29.31,21.655,636
+Kansas,Republican,Trump,26,28.295,30.59,32.885,35.18,30.59,636
+Kentucky,Democrat,Clinton,0,0,0,0,0,0,0
+Kentucky,Democrat,Sanders,0,0,0,0,0,0,0
+Kentucky,Republican,Rubio,0,0,0,0,0,0,0
+Kentucky,Republican,Cruz,15,15,15,15,15,15,532
+Kentucky,Republican,Trump,35,35,35,35,35,35,532
+Louisiana,Republican,Trump,38,40.25,42.5,45,48,42.75,1337
+Louisiana,Republican,Cruz,21,24.75,26,27.25,31,26,1337
+Louisiana,Democrat,Clinton,60,60.25,60.5,60.75,61,60.5,706.5
+Louisiana,Democrat,Sanders,14,17.75,21.5,25.25,29,21.5,706.5
+Louisiana,Republican,Rubio,0,0,0,0,0,0,0
+Maine,Republican,Cruz,0,0,0,0,0,0,0
+Maine,Republican,Rubio,0,0,0,0,0,0,0
+Maine,Democrat,Sanders,0,0,0,0,0,0,0
+Maine,Democrat,Clinton,0,0,0,0,0,0,0
+Maine,Republican,Trump,0,0,0,0,0,0,0
+Maryland,Republican,Cruz,0,0,0,0,0,0,0
+Maryland,Democrat,Clinton,50,55.25,57.5,58,58,55.75,491.75
+Maryland,Democrat,Sanders,32,32.75,34.5,38,44,36.25,491.75
+Maryland,Republican,Rubio,0,0,0,0,0,0,0
+Maryland,Republican,Trump,33,41.5,45,51.5,55,45.33333333,456.3333333
+Massachusetts,Republican,Trump,40,43,45,49.25,51.4,45.73333333,379.6666667
+Massachusetts,Republican,Rubio,0,0,0,0,0,0,0
+Massachusetts,Democrat,Sanders,42,43.7,44,46,49,44.725,573
+Massachusetts,Democrat,Clinton,42,46.75,48.5,50,53.9,48.2375,573
+Massachusetts,Republican,Cruz,0,0,0,0,0,0,0
+Michigan,Republican,Cruz,12,15.5,19,21.225,24,18.44733333,633.8
+Michigan,Republican,Rubio,0,0,0,0,0,0,0
+Michigan,Republican,Trump,29,35.5,40.89,41,42,38.184,633.8
+Michigan,Democrat,Clinton,53,55,57,61,66,58.54545455,437
+Michigan,Democrat,Sanders,29,33.5,36,40,44,36.54545455,437
+Minnesota,Democrat,Clinton,0,0,0,0,0,0,0
+Minnesota,Democrat,Sanders,0,0,0,0,0,0,0
+Minnesota,Republican,Rubio,0,0,0,0,0,0,0
+Minnesota,Republican,Cruz,0,0,0,0,0,0,0
+Minnesota,Republican,Trump,0,0,0,0,0,0,0
+Mississippi,Democrat,Sanders,11,11,11,11,11,11,471
+Mississippi,Republican,Trump,41,41,41,41,41,41,995
+Mississippi,Republican,Cruz,17,17,17,17,17,17,995
+Mississippi,Democrat,Clinton,65,65,65,65,65,65,471
+Mississippi,Republican,Rubio,0,0,0,0,0,0,0
+Missouri,Republican,Cruz,29,29,29,29,29,29,208
+Missouri,Republican,Rubio,0,0,0,0,0,0,0
+Missouri,Republican,Trump,36,36,36,36,36,36,208
+Missouri,Democrat,Sanders,40,40,40,43.5,47,42.33333333,551.3333333
+Missouri,Democrat,Clinton,44,45,46,46.5,47,45.66666667,551.3333333
+Montana,Democrat,Clinton,0,0,0,0,0,0,0
+Montana,Democrat,Sanders,0,0,0,0,0,0,0
+Montana,Republican,Rubio,0,0,0,0,0,0,0
+Montana,Republican,Cruz,0,0,0,0,0,0,0
+Montana,Republican,Trump,0,0,0,0,0,0,0
+Nebraska,Republican,Trump,0,0,0,0,0,0,0
+Nebraska,Republican,Cruz,0,0,0,0,0,0,0
+Nebraska,Republican,Rubio,0,0,0,0,0,0,0
+Nebraska,Democrat,Sanders,0,0,0,0,0,0,0
+Nebraska,Democrat,Clinton,0,0,0,0,0,0,0
+Nevada,Democrat,Clinton,45,46.5,47.5,49.25,53,48.25,584.75
+Nevada,Democrat,Sanders,45,46.5,47,47.5,49,47,584.75
+Nevada,Republican,Rubio,19,19,19,19,19,19,466
+Nevada,Republican,Cruz,0,0,0,0,0,0,0
+Nevada,Republican,Trump,39,40.5,42,43.5,45,42,466
+New Hampshire,Republican,Trump,28,29,31,33.25,36,31.39,490.75
+New Hampshire,Republican,Rubio,0,0,0,0,0,0,0
+New Hampshire,Democrat,Clinton,31,38,40.3,42,44,39.47777778,457.9444444
+New Hampshire,Democrat,Sanders,49.6,53.25,55,58,61,55.31111111,457.9444444
+New Hampshire,Republican,Cruz,0,0,0,0,0,0,0
+New Jersey,Republican,Cruz,0,0,0,0,0,0,0
+New Jersey,Republican,Rubio,0,0,0,0,0,0,0
+New Jersey,Democrat,Sanders,0,0,0,0,0,0,0
+New Jersey,Republican,Trump,0,0,0,0,0,0,0
+New Jersey,Democrat,Clinton,0,0,0,0,0,0,0
+New Mexico,Democrat,Clinton,0,0,0,0,0,0,0
+New Mexico,Democrat,Sanders,0,0,0,0,0,0,0
+New Mexico,Republican,Rubio,0,0,0,0,0,0,0
+New Mexico,Republican,Cruz,0,0,0,0,0,0,0
+New Mexico,Republican,Trump,0,0,0,0,0,0,0
+New York,Democrat,Clinton,50,52.25,53,54.5,57,53.21428571,658.7857143
+New York,Republican,Trump,50,52,54,55.25,60,53.9375,1682.875
+New York,Republican,Cruz,0,0,0,0,0,0,0
+New York,Republican,Rubio,0,0,0,0,0,0,0
+New York,Democrat,Sanders,37,39.25,40,42.75,47,41,658.7857143
+North Carolina,Democrat,Sanders,28,32.5,34,34.75,37,33.25,650.75
+North Carolina,Republican,Rubio,0,0,0,0,0,0,0
+North Carolina,Democrat,Clinton,56,56.75,57,57.25,58,57,650.75
+North Carolina,Republican,Trump,32,38.75,42.5,45,48,41.25,667.75
+North Carolina,Republican,Cruz,26,26.75,27.5,29.25,33,28.5,667.75
+North Dakota,Republican,Trump,0,0,0,0,0,0,0
+North Dakota,Democrat,Clinton,0,0,0,0,0,0,0
+North Dakota,Democrat,Sanders,0,0,0,0,0,0,0
+North Dakota,Republican,Rubio,0,0,0,0,0,0,0
+North Dakota,Republican,Cruz,0,0,0,0,0,0,0
+Ohio,Republican,Trump,29,33,38,38,41,35.88888889,608.2222222
+Ohio,Republican,Cruz,0,0,0,0,0,0,0
+Ohio,Democrat,Sanders,33,38,41,43,46,40.44444444,475.3333333
+Ohio,Democrat,Clinton,46,52,52,56,63,53.77777778,475.3333333
+Ohio,Republican,Rubio,0,0,0,0,0,0,0
+Oklahoma,Republican,Cruz,18,18.75,19.5,20.75,23,20,494.75
+Oklahoma,Democrat,Clinton,40,41.5,43,44.5,46,43,450.6666667
+Oklahoma,Democrat,Sanders,31,37.5,44,46,48,41,450.6666667
+Oklahoma,Republican,Rubio,0,0,0,0,0,0,0
+Oklahoma,Republican,Trump,29,32.75,34,34.25,35,33,494.75
+Oregon,Republican,Cruz,0,0,0,0,0,0,0
+Oregon,Republican,Rubio,0,0,0,0,0,0,0
+Oregon,Republican,Trump,0,0,0,0,0,0,0
+Oregon,Democrat,Clinton,48,48,48,48,48,48,304
+Oregon,Democrat,Sanders,33,33,33,33,33,33,304
+Pennsylvania,Democrat,Clinton,49,51.75,56.5,61.065,63.26,56.095,641.5833333
+Pennsylvania,Democrat,Sanders,31,32.9375,38,40.125,43,37.0825,641.5833333
+Pennsylvania,Republican,Rubio,0,0,0,0,0,0,0
+Pennsylvania,Republican,Cruz,20,23.5,26,26.75,28.2,25.22,650.5
+Pennsylvania,Republican,Trump,40,44.25,46.95,48.75,51,46.19,650.5
+Rhode Island,Democrat,Clinton,43.3,43.725,44.15,44.575,45,44.15,552
+Rhode Island,Democrat,Sanders,33.9,37.675,41.45,45.225,49,41.45,552
+Rhode Island,Republican,Rubio,0,0,0,0,0,0,0
+Rhode Island,Republican,Cruz,0,0,0,0,0,0,0
+Rhode Island,Republican,Trump,37.5,47.75,58,59.5,61,52.16666667,413.6666667
+South Carolina,Republican,Cruz,0,0,0,0,0,0,0
+South Carolina,Republican,Rubio,12.5,14.9575,15.295,18.25,25,16.538,1070.2
+South Carolina,Republican,Trump,28,32.9125,34.31,35.25,42,34.179,1070.2
+South Carolina,Democrat,Clinton,53,56.75,59.5,61,65,59.36428571,436.7857143
+South Carolina,Democrat,Sanders,14,30.25,32,35.875,41,32.03571429,436.7857143
+South Dakota,Republican,Trump,0,0,0,0,0,0,0
+South Dakota,Republican,Cruz,0,0,0,0,0,0,0
+South Dakota,Democrat,Clinton,0,0,0,0,0,0,0
+South Dakota,Democrat,Sanders,0,0,0,0,0,0,0
+South Dakota,Republican,Rubio,0,0,0,0,0,0,0
+Tennessee,Democrat,Clinton,54,56,58,59,60,57.33333333,479.3333333
+Tennessee,Democrat,Sanders,32,33,34,35.5,37,34.33333333,479.3333333
+Tennessee,Republican,Cruz,15,16.75,18.5,20.25,22,18.5,718.5
+Tennessee,Republican,Trump,40,42,44,46,48,44,718.5
+Tennessee,Republican,Rubio,0,0,0,0,0,0,0
+Texas,Democrat,Clinton,54,57.5,60.71,62.5,67.7,60.40090909,443.7272727
+Texas,Democrat,Sanders,26,29.63,34,38,44,34.05090909,443.7272727
+Texas,Republican,Rubio,0,0,0,0,0,0,0
+Texas,Republican,Cruz,29,33,35.4,38,42,35.43384615,555.4615385
+Texas,Republican,Trump,20,25,28,31,32,27.65615385,555.4615385
+Utah,Republican,Trump,0,0,0,0,0,0,0
+Utah,Republican,Cruz,42,44.75,47.5,50.25,53,47.5,357.5
+Utah,Democrat,Sanders,52,52,52,52,52,52,194
+Utah,Democrat,Clinton,44,44,44,44,44,44,194
+Utah,Republican,Rubio,0,0,0,0,0,0,0
+Vermont,Democrat,Clinton,10,10.7,11.4,12.1,12.8,11.4,518.5
+Vermont,Democrat,Sanders,77.9,79.925,81.95,83.975,86,81.95,518.5
+Vermont,Republican,Rubio,0,0,0,0,0,0,0
+Vermont,Republican,Cruz,0,0,0,0,0,0,0
+Vermont,Republican,Trump,33.2,33.2,33.2,33.2,33.2,33.2,115
+Virginia,Democrat,Clinton,49,51.5,56.5,58.5,60,55.16666667,506.1666667
+Virginia,Democrat,Sanders,33,33.25,35,38.25,46,36.83333333,506.1666667
+Virginia,Republican,Rubio,13,19,26,27,27,22.4,528.2
+Virginia,Republican,Cruz,0,0,0,0,0,0,0
+Virginia,Republican,Trump,33,36,38,40,41,37.6,528.2
+Washington,Republican,Trump,0,0,0,0,0,0,0
+Washington,Republican,Rubio,0,0,0,0,0,0,0
+Washington,Republican,Cruz,0,0,0,0,0,0,0
+Washington,Democrat,Clinton,0,0,0,0,0,0,0
+Washington,Democrat,Sanders,0,0,0,0,0,0,0
+West Virginia,Republican,Trump,0,0,0,0,0,0,0
+West Virginia,Republican,Cruz,0,0,0,0,0,0,0
+West Virginia,Republican,Rubio,0,0,0,0,0,0,0
+West Virginia,Democrat,Clinton,37,38.5,40,41.5,43,40,476
+West Virginia,Democrat,Sanders,45,45.5,46,46.5,47,46,476
+Wisconsin,Republican,Cruz,27.2,36.1,38,41,44,37.81818182,1167.090909
+Wisconsin,Republican,Rubio,0,0,0,0,0,0,0
+Wisconsin,Democrat,Sanders,41,47,48.5,49.05,51,47.4,543.75
+Wisconsin,Democrat,Clinton,43,43,45.95,47.5,50,45.8625,543.75
+Wisconsin,Republican,Trump,30.4,31.2,35,37,42,34.79090909,1167.090909
+Wyoming,Republican,Cruz,0,0,0,0,0,0,0
+Wyoming,Democrat,Clinton,0,0,0,0,0,0,0
+Wyoming,Democrat,Sanders,0,0,0,0,0,0,0
+Wyoming,Republican,Rubio,0,0,0,0,0,0,0
+Wyoming,Republican,Trump,0,0,0,0,0,0,0
