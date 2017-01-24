@@ -92,3 +92,6 @@ secret.txt
 
 .Rproj.user
 
+.DS_Store
+
+.idea/
