@@ -1,71 +1,71 @@
-"state","candidate","predicted_votes_received","actual_votes_received"
-"California","Bernie Sanders",1670703,1502043
-"California","Donald Trump",577035,1174829
-"California","Hillary Clinton",1618094,1940580
-"California","John Kasich",427340,176620
-"California","Ted Cruz",398754,144125
-"Connecticut","Bernie Sanders",159928,152410
-"Connecticut","Donald Trump",116110,123367
-"Connecticut","Hillary Clinton",154465,170075
-"Connecticut","John Kasich",46834,60481
-"Connecticut","Ted Cruz",39452,24969
-"Delaware","Bernie Sanders",36753,36659
-"Delaware","Donald Trump",29834,42472
-"Delaware","Hillary Clinton",40110,55950
-"Delaware","John Kasich",9639,14225
-"Delaware","Ted Cruz",10116,11110
-"Indiana","Bernie Sanders",194157,335256
-"Indiana","Donald Trump",372258,590460
-"Indiana","Hillary Clinton",203684,303382
-"Indiana","John Kasich",184387,83913
-"Indiana","Ted Cruz",207600,406280
-"Maryland","Bernie Sanders",322659,281275
-"Maryland","Donald Trump",185255,236623
-"Maryland","Hillary Clinton",362489,533247
-"Maryland","John Kasich",87474,100089
-"Maryland","Ted Cruz",78808,82038
-"Montana","Bernie Sanders",63463,63168
-"Montana","Donald Trump",61615,114056
-"Montana","Hillary Clinton",51330,55194
-"Montana","John Kasich",40493,10622
-"Montana","Ted Cruz",37256,14476
-"Nebraska","Bernie Sanders",NA,19120
-"Nebraska","Donald Trump",58122,121287
-"Nebraska","Hillary Clinton",NA,14340
-"Nebraska","John Kasich",34717,22526
-"Nebraska","Ted Cruz",32494,36418
-"New Jersey","Bernie Sanders",365615,323259
-"New Jersey","Donald Trump",150111,356697
-"New Jersey","Hillary Clinton",269090,554237
-"New Jersey","John Kasich",92771,59506
-"New Jersey","Ted Cruz",87217,27521
-"New Mexico","Bernie Sanders",120964,103856
-"New Mexico","Donald Trump",45350,73530
-"New Mexico","Hillary Clinton",85656,110451
-"New Mexico","John Kasich",29751,7870
-"New Mexico","Ted Cruz",21262,13825
-"Oregon","Bernie Sanders",208052,320746
-"Oregon","Donald Trump",114141,240804
-"Oregon","Hillary Clinton",220219,251739
-"Oregon","John Kasich",69832,59096
-"Oregon","Ted Cruz",68302,61590
-"Pennsylvania","Bernie Sanders",634510,719955
-"Pennsylvania","Donald Trump",598717,892702
-"Pennsylvania","Hillary Clinton",702371,918689
-"Pennsylvania","John Kasich",290470,304793
-"Pennsylvania","Ted Cruz",241752,340201
-"Rhode Island","Bernie Sanders",59778,66720
-"Rhode Island","Donald Trump",29701,39059
-"Rhode Island","Hillary Clinton",51638,52493
-"Rhode Island","John Kasich",12733,14929
-"Rhode Island","Ted Cruz",12703,6393
-"South Dakota","Bernie Sanders",24358,25958
-"South Dakota","Donald Trump",25182,44866
-"South Dakota","Hillary Clinton",18569,27046
-"South Dakota","John Kasich",14763,10659
-"South Dakota","Ted Cruz",14212,11352
-"West Virginia","Bernie Sanders",95932,123860
-"West Virginia","Donald Trump",66473,156245
-"West Virginia","Hillary Clinton",78866,86354
-"West Virginia","John Kasich",42598,13685
-"West Virginia","Ted Cruz",37875,18208
+ix,state,candidate,predicted_votes_received,actual_votes_received
+0,California,Bernie Sanders,1670703,1502043
+1,California,Donald Trump,577035,1174829
+2,California,Hillary Clinton,1618094,1940580
+3,California,John Kasich,427340,176620
+4,California,Ted Cruz,398754,144125
+5,Connecticut,Bernie Sanders,159928,152410
+6,Connecticut,Donald Trump,116110,123367
+7,Connecticut,Hillary Clinton,154465,170075
+8,Connecticut,John Kasich,46834,60481
+9,Connecticut,Ted Cruz,39452,24969
+10,Delaware,Bernie Sanders,36753,36659
+11,Delaware,Donald Trump,29834,42472
+12,Delaware,Hillary Clinton,40110,55950
+13,Delaware,John Kasich,9639,14225
+14,Delaware,Ted Cruz,10116,11110
+15,Indiana,Bernie Sanders,194157,335256
+16,Indiana,Donald Trump,372258,590460
+17,Indiana,Hillary Clinton,203684,303382
+18,Indiana,John Kasich,184387,83913
+19,Indiana,Ted Cruz,207600,406280
+20,Maryland,Bernie Sanders,322659,281275
+21,Maryland,Donald Trump,185255,236623
+22,Maryland,Hillary Clinton,362489,533247
+23,Maryland,John Kasich,87474,100089
+24,Maryland,Ted Cruz,78808,82038
+25,Montana,Bernie Sanders,63463,63168
+26,Montana,Donald Trump,61615,114056
+27,Montana,Hillary Clinton,51330,55194
+28,Montana,John Kasich,40493,10622
+29,Montana,Ted Cruz,37256,14476
+30,Nebraska,Bernie Sanders,NA,19120
+31,Nebraska,Donald Trump,58122,121287
+32,Nebraska,Hillary Clinton,NA,14340
+33,Nebraska,John Kasich,34717,22526
+34,Nebraska,Ted Cruz,32494,36418
+35,New Jersey,Bernie Sanders,365615,323259
+36,New Jersey,Donald Trump,150111,356697
+37,New Jersey,Hillary Clinton,269090,554237
+38,New Jersey,John Kasich,92771,59506
+39,New Jersey,Ted Cruz,87217,27521
+40,New Mexico,Bernie Sanders,120964,103856
+41,New Mexico,Donald Trump,45350,73530
+42,New Mexico,Hillary Clinton,85656,110451
+43,New Mexico,John Kasich,29751,7870
+44,New Mexico,Ted Cruz,21262,13825
+45,Oregon,Bernie Sanders,208052,320746
+46,Oregon,Donald Trump,114141,240804
+47,Oregon,Hillary Clinton,220219,251739
+48,Oregon,John Kasich,69832,59096
+49,Oregon,Ted Cruz,68302,61590
+50,Pennsylvania,Bernie Sanders,634510,719955
+51,Pennsylvania,Donald Trump,598717,892702
+52,Pennsylvania,Hillary Clinton,702371,918689
+53,Pennsylvania,John Kasich,290470,304793
+54,Pennsylvania,Ted Cruz,241752,340201
+55,Rhode Island,Bernie Sanders,59778,66720
+56,Rhode Island,Donald Trump,29701,39059
+57,Rhode Island,Hillary Clinton,51638,52493
+58,Rhode Island,John Kasich,12733,14929
+59,Rhode Island,Ted Cruz,12703,6393
+60,South Dakota,Bernie Sanders,24358,25958
+61,South Dakota,Donald Trump,25182,44866
+62,South Dakota,Hillary Clinton,18569,27046
+63,South Dakota,John Kasich,14763,10659
+64,South Dakota,Ted Cruz,14212,11352
+65,West Virginia,Bernie Sanders,95932,123860
+66,West Virginia,Donald Trump,66473,156245
+67,West Virginia,Hillary Clinton,78866,86354
+68,West Virginia,John Kasich,42598,13685
+69,West Virginia,Ted Cruz,37875,18208
