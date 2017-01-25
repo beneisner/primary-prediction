@@ -33,31 +33,6 @@ testMat <- as.matrix(test_df[predictors])
 testResponse <- as.matrix(test_df[response])
 
 
-
-
-
-
-
-
-Prison <- read.csv("http://www.oberlin.edu/faculty/cdesante/assets/downloads/prison.csv")
-head(Prison)
-
-all_states <- map_data("state")
-all_states
-head(all_states)
-Prison$region <- Prison$stateName
-Total <- merge(all_states, Prison, by="region")
-head(Total)
-Total <- Total[Total$region!="district of columbia",]
-
-p <- ggplot()
-p <- p + geom_polygon(data=Total, aes(x=long, y=lat, group = group, fill=Total$bwRatio),colour="white"
-) + scale_fill_continuous(low = "thistle2", high = "darkred", guide="colorbar")
-P1 <- p + theme_bw()  + labs(fill = "Black to White Incarceration Rates \n Weighted by Relative Population" 
-                             ,title = "State Incarceration Rates by Race, 2010", x="", y="")
-P1 + scale_y_continuous(breaks=c()) + scale_x_continuous(breaks=c()) + theme(panel.border =  element_blank())
-
-
 testResponse_df <- data.frame(testResponse)
 
 
@@ -83,23 +58,46 @@ p8 <- p8 + theme(panel.grid.major = element_blank(),
                  panel.grid.minor = element_blank(),
                  panel.background = element_rect(fill='black', colour='black'))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 fit <- readRDS("RDS/svmRadialFit2")
 preds <- as.numeric(as.character(predict(fit, newdata = testMat)))
+
+
+
+
+
+
+
+test_df$vote_fraction_residual <- test_df$fraction_votes - test_df$svm_pred
+
+republican_plot_df <- test_df[which(test_df$party == 0),]
+republican_plot_df <- republican_plot_df[c("candidate", "vote_fraction_residual")]
+
+dat <- data.frame(dens = c(rnorm(100), rnorm(100, 10, 5))
+                  , lines = rep(c("a", "b"), each = 100))
+#Plot.
+repub_plot <- ggplot(republican_plot_df, aes(x = vote_fraction_residual, fill = candidate)) + geom_density(alpha = 0.5) + theme(plot.background = element_rect(fill = 'black', colour = 'black'))
+repub_plot <- repub_plot + theme(panel.background = element_rect(fill = 'black', colour = 'black'))
+repub_plot <- repub_plot + theme(legend.background = element_rect(fill = 'black', colour = 'black'))
+repub_plot <- repub_plot + theme(text=element_text(colour="white"))
+repub_plot <- repub_plot + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+repub_plot <- repub_plot + theme(axis.text.x=element_text(colour="white"))
+repub_plot <- repub_plot + theme(axis.text.y=element_text(colour="white"))
+repub_plot <- repub_plot + xlim(-0.45, 0.85) + xlab("Actual Vote % - Predicted Vote %")
+repub_plot
+
+
+democrat_plot_df <- test_df[which(test_df$party == 1),]
+democrat_plot_df <- democrat_plot_df[c("candidate", "vote_fraction_residual")]
+
+#Plot.
+democrat_plot <- ggplot(democrat_plot_df, aes(x = vote_fraction_residual, fill = candidate)) + geom_density(alpha = 0.5) + theme(plot.background = element_rect(fill = 'black', colour = 'black'))
+democrat_plot <- democrat_plot + theme(panel.background = element_rect(fill = 'black', colour = 'black'))
+democrat_plot <- democrat_plot + theme(legend.background = element_rect(fill = 'black', colour = 'black'))
+democrat_plot <- democrat_plot + theme(text=element_text(colour="white"))
+democrat_plot <- democrat_plot + theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+democrat_plot <- democrat_plot + theme(axis.text.x=element_text(colour="white"))
+democrat_plot <- democrat_plot + theme(axis.text.y=element_text(colour="white"))
+democrat_plot <- democrat_plot + xlim(-0.45, 0.85) + xlab("Actual Vote % - Predicted Vote %")
+
+democrat_plot
 
