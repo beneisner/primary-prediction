@@ -10,8 +10,8 @@ train_df <- readRDS("RDS/train_df")
 val_df <- readRDS("RDS/val_df")
 test_df <- readRDS("RDS/test_df")
 
-fs_results <- readRDS("RDS/fs_results")
-fs_var <- fs_results$optVariables
+# fs_results <- readRDS("RDS/fs_results")
+fs_var <- readRDS("RDS/fs_var")
 predictors <- fs_var
 response <- c("fraction_votes")
 
@@ -55,6 +55,43 @@ tr2 <- trainControl(method="cv", number=1, index=list(Fold1=c(trainStartRow:trai
 
 registerDoMC(8)
 
+
+# GBM
+# gbmFit <- train(fraction_votes ~., data = bigdf,
+#                 method = "gbm",
+#                 trControl = tr2)
+# 
+# saveRDS(gbmFit, file = "RDS/gbmFit")
+
+# NN
+# nnetFit <- train(fraction_votes ~., data = bigdf,
+#                 method = "nnet",
+#                 trControl = tr2)
+# 
+# saveRDS(nnetFit, file = "RDS/nnetFit")
+
+# pcaNNet
+# pcaNNetFit <- train(fraction_votes ~., data = bigdf,
+#                  method = "pcaNNet",
+#                  trControl = tr2)
+# 
+# saveRDS(pcaNNetFit, file = "RDS/pcaNNetFit")
+
+# glmnet
+# glmnetFit <- train(fraction_votes ~., data = bigdf,
+#                     method = "glmnet",
+#                     trControl = tr2)
+# 
+# saveRDS(glmnetFit, file = "RDS/glmnetFit")
+
+# Random Forest
+# rfFit <- train(fraction_votes ~., data = bigdf,
+#                    method = "rf",
+#                    tuneGrid = expand.grid(mtry = c(3,4,5)),
+#                    trControl = tr2)
+# 
+# saveRDS(rfFit, file = "RDS/rfFit")
+
 # Radial SVM
 # svmRadialGrid <- expand.grid(sigma = c(0.001,0.005,0.01,0.05), C = c(0.25,0.5,1,2,4,8))
 # svmRadialFit <- train(fraction_votes ~., data = bigdf,
@@ -66,21 +103,21 @@ registerDoMC(8)
 
 
 # Linear SVM
-svmLinearGrid <- expand.grid(C = c(0.25, 0.5, 1, 2, 4))
-svmLinearFit <- train(fraction_votes ~., data = bigdf,
-                method = "svmLinear",
-                tuneGrid = svmLinearGrid,
-                trControl = tr2)
-
-saveRDS(svmLinearFit, file = "RDS/svmLinearFit2")
+# svmLinearGrid <- expand.grid(C = c(0.25, 0.5, 1, 2, 4))
+# svmLinearFit <- train(fraction_votes ~., data = bigdf,
+#                 method = "svmLinear",
+#                 tuneGrid = svmLinearGrid,
+#                 trControl = tr2)
+# 
+# saveRDS(svmLinearFit, file = "RDS/svmLinearFit2")
 
 # Poly SVM
-svmPolyGrid <- expand.grid(C = c(0.25, 0.5, 1, 2, 4))
-svmPolyFit <- train(fraction_votes ~., data = bigdf,
-                      method = "svmPoly",
-                      trControl = tr2)
-
-saveRDS(svmPolyFit, file = "RDS/svmPolyFit2")
+# svmPolyGrid <- expand.grid(C = c(0.25, 0.5, 1, 2, 4))
+# svmPolyFit <- train(fraction_votes ~., data = bigdf,
+#                       method = "svmPoly",
+#                       trControl = tr2)
+# 
+# saveRDS(svmPolyFit, file = "RDS/svmPolyFit2")
 
 # svmBaggedPipeline <- function(X_train, Y_train, X_test, Y_test, params) {
 #   samplingSize_p <- params[1]
@@ -102,20 +139,91 @@ saveRDS(svmPolyFit, file = "RDS/svmPolyFit2")
 # saveRDS(svmBaggedBestParam, file= "RDS/svmBaggedBestParam")
 
 
-# svmBaggedFit <- parallelSVM(x = trainMat, y = trainResponse,
-#                    numberCores = 8, samplingSize = 0.75,
-#                    gamma=0.015, cost = 1.8,
+# svmBaggedFit2 <- parallelSVM(x = trainMat, y = trainResponse,
+#                    numberCores = 8, samplingSize = 0.73,
+#                    gamma=0.001, cost = 1,
 #                    verbose = TRUE, cachesize = 300)
 # 
-# saveRDS(svmBaggedFit, file = "RDS/svmBaggedFit")
+# saveRDS(svmBaggedFit2, file = "RDS/svmBaggedFit2")
 # 
-# fit <- readRDS("RDS/svmBaggedFit")
+# fit <- readRDS("RDS/svmBaggedFit2")
 # preds <- as.numeric(as.character(predict(fit, newdata = valMat)))
 # sqrt(mean((preds-valResponse)^2))
+# preds <- as.numeric(as.character(predict(fit, newdata = testMat)))
+# sqrt(mean((preds-testResponse)^2))
 
+
+
+
+
+# fit <- readRDS("RDS/svmPolyFit2")
+# fit2 <- readRDS("RDS/svmRadialFit2")
+# preds <- as.numeric(as.character(predict(fit, newdata = testMat)))
+# preds2 <- as.numeric(as.character(predict(fit2, newdata = testMat)))
+# sqrt(mean((preds2-testResponse)^2))
+# sqrt(mean(((preds+preds2)/2-testResponse)^2))
+
+fit <- readRDS("RDS/svmBaggedFit2")
+print("For Bagged SVM")
+preds_svm_bagged_val <- as.numeric(as.character(predict(fit, newdata = valMat)))
+sqrt(mean((preds_svm_bagged_val-valResponse)^2))
+preds_svm_bagged_test <- as.numeric(as.character(predict(fit, newdata = testMat)))
+sqrt(mean((preds_svm_bagged_test-testResponse)^2))
+
+fit <- readRDS("RDS/svmRadialFit2")
+print("For SVM w/ Radial Kernel")
+preds_svm_rbf_val <- as.numeric(as.character(predict(fit, newdata = valMat)))
+sqrt(mean((preds_svm_rbf_val-valResponse)^2))
+preds_svm_rbf_test <- as.numeric(as.character(predict(fit, newdata = testMat)))
+sqrt(mean((preds_svm_rbf_test-testResponse)^2))
+
+fit <- readRDS("RDS/svmPolyFit2")
+print("For SVM w/ Poly Kernel")
+preds_svm_poly_val <- as.numeric(as.character(predict(fit, newdata = valMat)))
+sqrt(mean((preds_svm_poly_val-valResponse)^2))
+preds_svm_poly_test <- as.numeric(as.character(predict(fit, newdata = testMat)))
+sqrt(mean((preds_svm_poly_test-testResponse)^2))
 
 fit <- readRDS("RDS/svmLinearFit2")
-preds <- as.numeric(as.character(predict(fit, newdata = testMat)))
-sqrt(mean((preds-testResponse)^2))
+print("For SVM w/ Linear Kernel")
+preds_svm_linear_val <- as.numeric(as.character(predict(fit, newdata = valMat)))
+sqrt(mean((preds_svm_linear_val-valResponse)^2))
+preds_svm_linear_test <- as.numeric(as.character(predict(fit, newdata = testMat)))
+sqrt(mean((preds_svm_linear_test-testResponse)^2))
+
+fit <- readRDS("RDS/nnetFit")
+print("For a neural network")
+preds_nn_val <- as.numeric(as.character(predict(fit, newdata = valMat)))
+sqrt(mean((preds_nn_val-valResponse)^2))
+preds_nn_test <- as.numeric(as.character(predict(fit, newdata = testMat)))
+sqrt(mean((preds_nn_test-testResponse)^2))
+
+fit <- readRDS("RDS/gbmFit")
+print("For stochastic gradient boosting")
+preds_gbm_val <- as.numeric(as.character(predict(fit, newdata = valMat)))
+sqrt(mean((preds_gbm_val-valResponse)^2))
+preds_gbm_test <- as.numeric(as.character(predict(fit, newdata = testMat)))
+sqrt(mean((preds_gbm_test-testResponse)^2))
+
+fit <- readRDS("RDS/glmnetFit")
+print("For glmnet")
+preds_glmnet_val <- as.numeric(as.character(predict(fit, newdata = valMat)))
+sqrt(mean((preds_glmnet_val-valResponse)^2))
+preds_glmnet_test <- as.numeric(as.character(predict(fit, newdata = testMat)))
+sqrt(mean((preds_glmnet_test-testResponse)^2))
+
+fit <- readRDS("RDS/rfFit")
+print("For random forest")
+preds_rf_val <- as.numeric(as.character(predict(fit, newdata = valMat)))
+sqrt(mean((preds_rf_val-valResponse)^2))
+preds_rf_test <- as.numeric(as.character(predict(fit, newdata = testMat)))
+sqrt(mean((preds_rf_test-testResponse)^2))
+
+cor(preds_glmnet_test, preds_svm_linear_test)
+
+print("For model averaged")
+sqrt(mean((rowMeans(cbind(preds_svm_rbf_val, preds_svm_poly_val, preds_svm_linear_val))-valResponse)^2))
+sqrt(mean((rowMeans(cbind(preds_svm_rbf_test, preds_svm_poly_test, preds_svm_linear_test))-testResponse)^2))
+
 
 

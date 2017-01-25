@@ -121,6 +121,7 @@ primary_results_df$state_abbreviation.x <- NULL
 state <- primary_results_df$state
 primary_results_df$state <- NULL
 primary_results_df$state_abbreviation.y <- NULL
+county <- primary_results_df$county
 primary_results_df$county <- NULL
 
 candidate <- primary_results_df$candidate
@@ -134,6 +135,7 @@ colnames(candidate_df) <- c("Ben_Carson", "Bernie_Sanders", "Carly_Fiorina",
                             )
 
 primary_results_df <- cbind(primary_results_df, candidate_df)
+candidate <- primary_results_df$candidate
 primary_results_df$candidate <- NULL
 
 fraction_votes <- primary_results_df$fraction_votes
@@ -148,11 +150,13 @@ primary_results_df$PST040210[which(is.na(primary_results_df$PST040210))] <- medi
 primary_results_df$POP010210[which(is.na(primary_results_df$POP010210))] <- median(primary_results_df$POP010210[which(!is.na(primary_results_df$POP010210))])
 primary_results_df$polling_mean[which(is.na(primary_results_df$polling_mean))] <- median(primary_results_df$polling_mean[which(!is.na(primary_results_df$polling_mean))])
 
+
 primary_results_df$fraction_votes <- fraction_votes
 primary_results_df$votes <- votes
 primary_results_df$primary_date <-  as.Date(primary_date, "%m/%d/%y")
 primary_results_df$fips <- NULL
 
+primary_results_df$county <- county
 primary_results_df$state <- state
 primary_results <- data.table(primary_results_df)
 
@@ -171,4 +175,17 @@ test_df <- primary_results_df[which(primary_results_df$primary_date >= "2016-04-
 saveRDS(train_df, file = "RDS/train_df")
 saveRDS(val_df, file = "RDS/val_df")
 saveRDS(test_df, file = "RDS/test_df")
+
+
+
+primary_results_df <- cbind(primary_results_df, candidate)
+
+train_df <- primary_results_df[which(primary_results_df$primary_date <= "2016-03-05"),]
+val_df <- primary_results_df[which(primary_results_df$primary_date >= "2016-03-08" & 
+                                     primary_results_df$primary_date <= "2016-04-19"),]
+test_df <- primary_results_df[which(primary_results_df$primary_date >= "2016-04-26"),]
+
+saveRDS(train_df, file = "RDS/train_analysis_df")
+saveRDS(val_df, file = "RDS/val_analysis_df")
+saveRDS(test_df, file = "RDS/test_analysis_df")
 

@@ -97,6 +97,9 @@ p8 <- p8 + theme(panel.grid.major = element_blank(),
 
 
 
+
+
+
 fit <- readRDS("RDS/svmRadialFit2")
 preds <- as.numeric(as.character(predict(fit, newdata = testMat)))
 
