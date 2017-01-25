@@ -54,7 +54,7 @@ test_df$svm_pred <- sapply(c(1:nrow(test_df)), function(x) {
 })
 
 test_df$svm_votes <- sapply(c(1:nrow(test_df)), function(x) {
-  return(round((test_df$votes[x]/test_df$fraction_votes[x]) * test_df$svm_pred[x]))
+  return(round((test_df$votes[x]/(test_df$fraction_votes[x] + 0.000001)) * test_df$svm_pred[x]))
 })
 
 test_dt <- data.table(test_df)
